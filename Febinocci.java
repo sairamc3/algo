@@ -13,18 +13,22 @@ class Febinocci {
 
 		System.out.println("Recursive ->  " + recursive(given));
 		System.out.println("Iterative -> ");
-		iterative(given);
+		System.out.println(iterative(given));
 
 	}
 
 	// Recursive approach for factorial
+	// Looks simple but more complex
+	// O(2^n)
 	private static int recursive(int number) {
 		if(number<2) return number;
 		return recursive(number-1) + recursive(number-2);
 
 	}
 	
-	private static void iterative(int number){
+	// O(n)
+	// Result will be obtained in one iteration
+	private static int iterative(int number){
 		
 		int prev=0;
 		int current=1;
@@ -38,6 +42,7 @@ class Febinocci {
 				
 		
 		}
+	return prev;
 	}
 
 }
