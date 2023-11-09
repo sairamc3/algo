@@ -33,14 +33,12 @@ class SelectionSort {
 	 */
 	private static void selectionSort(int[] arr) {
 
-		// This logic has to be fixed. Getting index out of bounds exception
-		// Commiting for now
 
 		for(int i=0; i<arr.length-1; i++){
 			int min = i;
 			int temp = arr[min];
 
-			for(int j=i+1; i<arr.length; j++){
+			for(int j=i+1; j<arr.length; j++){
 
 				if(arr[j]<arr[min]){
 					min = j;
