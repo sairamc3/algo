@@ -1,0 +1,33 @@
+Best index:
+
+How to find best index in an array.
+
+Consider having an array of size 10.
+
+Best index is the index having special sum.
+
+	Special Sum: 
+		Special sum of index 3 is ->
+		
+		A[3]+(A[4]+A[5])+(A[6]+A[7]+A[8])
+
+		The sum stops at index 8, since the next 4 indexes are not available.
+
+Brute Force approach:
+
+	- Calculate the Special sum of every element in the array
+		* Find the difference between last index and the choosen index
+		* That particular number should match the sequnce 1+2+3+....+n
+			> the toughest part of the problem is here
+		* to find the sum of the above series until the nth element, the forumla would be
+			> n*(n+1)/2 
+		* if we try to solve the above problem with this solution
+			> total elements is 10, i.e the index will be until 9
+			> choosen index is 3
+			> hence 9-3 = 6
+			> so the no of elements that we can add should be less than 6
+			> according to above formula
+				- n*(n+1)/2 <= 6
+			> in this case it would be 3 -> 3*4/2 = 6
+			> so we add from A[3]...A[8]
+	- In that choose the max number 
