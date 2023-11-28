@@ -1,0 +1,33 @@
+To solve this problem:
+
+	1. Find the no of match sticks are used to get the given number
+		- Since each number has specified amount of sticks required, it is not hard to find out.
+		- We can create a hashmap to store that information
+			0 -> 6
+			1 -> 2
+			2 -> 5
+			3 -> 5
+			4 -> 4
+			5 -> 5
+			6 -> 6
+			7 -> 3
+			8 -> 7
+			9 -> 6
+	2. How to find the max number using the same or less no of sticks
+		- We should get more numbers with the count ( so that if we get 3 numbers then the numbers will be in hundreds)
+		- Next priority would be order the max number to the left side
+	
+	Example:
+
+		if the sample is given as 6, then the no of sticks she has is 6.
+		now with 6 sticks, calculate the max number
+		
+		it looks like we need not think about all the numbers.
+
+		We can use only 2 and 3 match sticks to form a number
+
+			-> which would be '1' and '7'
+		So in this case, we can divide the number by 2 and result would be no of one's
+		if the number is odd then we can modify the left most number with 3.
+		
+		Let's try that... 

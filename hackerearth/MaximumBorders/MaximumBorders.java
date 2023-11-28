@@ -17,32 +17,18 @@ public class MaximumBorders {
 
 			String[] firstLine= br.readLine().split(" ");
 
-			int noOfRows = Integer.parseInt(firstLine[0]);
-			int noOfColumns = Integer.parseInt(firstLine[1]);
+			int n = Integer.parseInt(firstLine[0]);
+			int m = Integer.parseInt(firstLine[1]);
 
-			String[][] matrix = new String[noOfRows][noOfColumns];
+			String[] a = new String[n];
 
-			for(int row=0; row<noOfRows; row++){
+			for(int i=0; i<n; i++){
 
-				String[] columns = br.readLine().split("");
-
-				for(int column=0; column<columns.length; column++){
-
-					matrix[row][column]=columns[column];
-
-				}
+				a[i]=br.readLine();
 			}
 
-			// Printing the data that has been fetched
-
-			System.out.println("Printing the input:");
-
-			Arrays.stream(matrix)
-					.map(row -> String.join(" ", row))
-					.forEach(System.out::println);
-
-			int result=findMaximumBorder(matrix, noOfRows, noOfColumns);
-
+			
+			
 		}
 
 		
@@ -51,19 +37,4 @@ public class MaximumBorders {
 	}
 
 
-	// Work in progress
-	private static int findMaximumBorder(String[][] matrix, int rowSize, int columnSize){
-
-		int boarder=0;
-
-		for(int row=0; row< rowSize; row++){
-
-
-			for(int column=0; column < columnSize; column++){
-
-
-			}
-		}
-		return boarder;
-	}
 }
