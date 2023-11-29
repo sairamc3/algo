@@ -1,0 +1,18 @@
+given:
+
+Two arrays of same size and same elements, but the order of the elements is different.
+We need to make sure that by modifying the min subset of the array to make the two arrays equal. 
+
+Example:
+	A -> {1,1,2,1}
+	B -> {2,1,1,1}
+
+So, here last element is the same hence need to sort the last one. So we need to sort from index 0 to 2. Hence the length of the sub array would be 3.
+
+We should implement this logic in coding. 
+
+	- to make things simple, we need to find the common ones from the begining of the array and the ending of the array. 
+	- then the subarray in the middle will be become the subarray that need to be sorted. 
+
+	Caution: Please be careful about the edge cases. 
+
