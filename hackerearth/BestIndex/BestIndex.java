@@ -34,18 +34,24 @@ class BestIndex {
             if(noOfElementsCanBeSummed == 1){
                 specialsum.add(givenList.get(i));
             } else {
-                int n=0;
-
-                int shouldBeSummed = 0;
-                while(n < (givenList.size()-n){
-                    shouldBeSummed = n*(n+1)/2;
-                    n++;
+                findNoOfItemsToAdd(i, givenList.size());
                 }
             }
+        }
+
+        public static int findNoOfItemsToAdd(int i, int size){
+
+            // i+n*(n+1)/2 < size -1
+            //n*(n+1) < (size -(i+1)) * 2
+
+            int count = 0;
+
+            
+
         }
         
        
     
 
     }
-}
+

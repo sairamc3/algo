@@ -30,4 +30,6 @@ Brute Force approach:
 				- n*(n+1)/2 <= 6
 			> in this case it would be 3 -> 3*4/2 = 6
 			> so we add from A[3]...A[8]
-	- In that choose the max number 
+	- In that choose the max number
+
+--------------Looks like need work in different way -------------------- 
