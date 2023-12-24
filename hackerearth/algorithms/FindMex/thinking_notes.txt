@@ -1,0 +1,41 @@
+### My understanding of the problem
+
+Given an array, for every element in the array, find the min integer greater than or equal to zero until zero index. 
+
+Ex: {1,0,5,5,3}
+1 -> 0
+0 -> 2, Since 1 and 0 alrady exist
+5 -> 2, "    "
+5 -> 2, "  "
+3 -> 2, "  "
+
+### Brute force approach
+
+Complexity seems to be N^2, Since for every element we need search the remaining elements until, 0 index. 
+
+What if we go in reverse order?
+
+For example, if we find the min element for the whole array first.. like for 3.
+
+The min element would be 2.
+
+Now we should remove each element from the last, and compare it to the last element. 
+
+3 > 2
+5 > 2
+0 < 2 -> In this case replace it if the element does not exist in the remaining list. (This approach would be complex and need to scan the whole elements again)
+
+{0, 1, 2, 3, 2, 1}
+{1,2,3,4,4,4} 
+
+--------------
+Finally this is my approach
+
+1. I am going find the min element for the whole array
+2. Then I compare the min element with the remaining elements in descending order of the index
+3. If the min element is greater than the index value, then I will print the same min value
+4. If the min element is less than the index value, then Will check if the same element is present in the reamining part of the array.
+	- If exists, print the same min element
+	- If does not exist, then print the index value and corrospondingly for all the remaining as the default value
+
+	
