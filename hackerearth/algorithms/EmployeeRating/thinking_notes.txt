@@ -1,0 +1,30 @@
+Problem:
+
+My understanding:
+
+	They will give you an array, and in that you need to find the consequtive integers which are greater than 6. The max number of that set will become the answer for the test case. 
+
+Ex: {2,4,6,9,8,10,3,9,7,8,7}
+
+In the above case, there are two sets of the numbers.
+
+	{_,_,_,9,8,10,_,9,7,8,7}
+
+Since the consecutive numbers length are 3 and 4. 4 is max hence 4 is the answer. 
+
+Brute Force Aproach:
+--------------------
+	- We need to maintain two numbers
+		1. The final count of consecutive number >6
+		2. The current count of the consecutive numbers
+	- We iterate through the list
+		- When we find the number greater than 6, then we increment the 'current_count'. We do it until the consecutiveness is broken.
+		- There are two chances that the consecutiveness will be broken
+			1. if we get a number <6
+			2. end of the arry
+		- In both the cases we need to comare it with the final_count. 
+			- If the current_count > final_count, then final_count=current_count and set current_count=0
+			- Continue processing until the end of the array
+
+This approach has the complexity O(n). So it should be good approach.
+
